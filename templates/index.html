@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>ENTREPRENEURIAT VERT</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo ENTREPRENEURIAT VERT" class="logo">
+        <nav>
+            <a href="#hero">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#products">Produits</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Slider -->
+<section id="hero" class="hero">
+    <div class="hero-slide">
+        <div class="hero-overlay"></div>
+        <img src="{{ url_for('static', filename='images/vetiver1.jpg') }}" class="slide-img active">
+        <img src="{{ url_for('static', filename='images/vetiver2.jpg') }}" class="slide-img">
+        <div class="hero-content">
+            <h1>Vétiver (Motra)</h1>
+            <p>
+                Le vétiver est une plante robuste et flexible, idéale pour la fabrication de sacs et d’objets artisanaux durables. 
+                Sa culture contribue à l’économie locale et à la préservation de l’environnement.
+            </p>
+            <a href="#products" class="btn-primary">Découvrir nos produits</a>
+        </div>
+    </div>
+</section>
+
+<!-- À propos -->
+<section id="about" class="about animate">
+    <h2>À propos de notre projet</h2>
+    <p class="about-text">
+        ENTREPRENEURIAT VERT est un projet d'entrepreneuriat vert, initié par des étudiants en Finances et Comptabilité (FIC) et Commerce et Administration des Affaires (CAA). 
+        Notre objectif est de valoriser le vétiver local pour produire des articles artisanaux durables et esthétiques tout en contribuant au développement économique et social de Madagascar.
+    </p>
+    <div class="cards">
+        <div class="card">
+            <h3>Notre Mission</h3>
+            <p>Transformer le vétiver en produits durables tout en créant des emplois locaux et valorisant le savoir-faire traditionnel.</p>
+        </div>
+        <div class="card">
+            <h3>Impact Social</h3>
+            <p>Former les jeunes aux techniques artisanales et intégrer les meilleurs talents au sein de notre entreprise.</p>
+        </div>
+        <div class="card">
+            <h3>Écologie & Durabilité</h3>
+            <p>Produits respectueux de l'environnement, issus d'une ressource renouvelable et contribuant à l'économie verte.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Galerie Produits -->
+<section id="products" class="gallery animate">
+    <h2>Nos produits</h2>
+    <div class="products-row">
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/sac1.jpg') }}" alt="Sac en vétiver" onclick="openLightbox(this)">
+            <h3>Sac en vétiver</h3>
+            <p>Pratique et résistant, parfait pour un usage quotidien.</p>
+            <button class="btn-secondary">Commander</button>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/sac2.jpg') }}" alt="Sac artisanal" onclick="openLightbox(this)">
+            <h3>Sac artisanal</h3>
+            <p>Chaque pièce est unique, faite main par nos artisans.</p>
+            <button class="btn-secondary">Commander</button>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/objet1.jpg') }}" alt="Nid d'oiseau en vétiver" onclick="openLightbox(this)">
+            <h3>Nid d'oiseau en vétiver</h3>
+            <p>Objet décoratif parfumé qui apaise, purifie l’air et repousse les mites.</p>
+            <button class="btn-secondary">Commander</button>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/tisane.jpg') }}" alt="Tisane en petit sac" onclick="openLightbox(this)">
+            <h3>Tisane en petit sac</h3>
+            <p>Infusion artisanale à base de vétiver, bio et naturelle.</p>
+            <button class="btn-secondary">Commander</button>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+</div>
+
+<!-- Contact -->
+<section id="contact" class="contact animate">
+    <h2>Contactez-nous</h2>
+    <p>Email: <a href="mailto:contact@entrepreneuriatvert.mg">contact@entrepreneuriatvert.mg</a></p>
+    <p>Téléphone: +261 34 12 345 67</p>
+    <p>Adresse: Antananarivo, Madagascar</p>
+    <div class="social-icons">
+        <a href="#"><img src="{{ url_for('static', filename='images/social/facebook.png') }}" alt="Facebook"></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/social/instagram.png') }}" alt="Instagram"></a>
+        <a href="#"><img src="{{ url_for('static', filename='images/social/twitter.png') }}" alt="Twitter"></a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 ENTREPRENEURIAT VERT - Tous droits réservés</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+</body>
+</html>
